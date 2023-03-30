@@ -20,7 +20,10 @@ def bfs(metro_graph, departure, arrival):
         
         # If we reached our arrival station then we return this path as output
         if station == arrival:
-            return path
+
+            # Calculate the number of stations in the path
+            num_stations = len(path) - 1
+            return path, num_stations
         else:
             # Add station to the visited set
             visited.add(station)

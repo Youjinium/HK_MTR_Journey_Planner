@@ -10,10 +10,10 @@ def main():
     arrival = 'Central'
 
     # Find the shortest path using BFS
-    shortest_path = bfs.bfs(metro_system, depature, arrival)
+    shortest_path, num_stations = bfs.bfs(metro_system, depature, arrival)
 
     # Print the shortest path
-    print(f"The shortest path from {depature} to {arrival} is {shortest_path}")
+    print(f"The shortest path from {depature} to {arrival} is {shortest_path}. Number of stations: {num_stations}")
 
 if __name__ == "__main__":
     main()
