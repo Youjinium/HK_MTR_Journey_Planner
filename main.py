@@ -7,7 +7,7 @@ def main():
 
     # Define the start and end station
     depature = 'Hong Kong'
-    arrival = 'Central'
+    arrival = 'Tsing Yi'
 
     # Find the shortest path using BFS
     shortest_path, num_stations = bfs.bfs(metro_system, depature, arrival)
