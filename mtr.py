@@ -74,6 +74,10 @@ def generate_hk_metro_system():
 
             add_next_station(metro_system, prev_row, row, next_row)
 
+        # HotFix for remove duplicate stations (Current fix, better to remove duplicate in add_next_station)
+        for key, value in metro_system.items():
+            metro_system[key] = list(set(value))
+
     return metro_system
 
 print(generate_hk_metro_system())
