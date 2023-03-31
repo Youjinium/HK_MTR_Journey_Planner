@@ -16,7 +16,10 @@ def add_next_station(metro_system, prev_row, row, next_row):
             if prev_row['Line Code'] == row['Line Code']:
                 next_station = row['English Name']
                 if next_station not in metro_system[station]:
-                    metro_system[station].append(next_station)
+                    # (Station name, cost)
+                    cost = int(row['Sequence']) - int(prev_row['Sequence'])
+                    station_tuple = (next_station, cost)
+                    metro_system[station].append(station_tuple)
 
     if row is not None:
         station = row['English Name']
@@ -27,14 +30,20 @@ def add_next_station(metro_system, prev_row, row, next_row):
             if prev_row['Line Code'] == row['Line Code']:
                 prev_station = prev_row['English Name']
                 if prev_station not in metro_system[station]:
-                    metro_system[station].append(prev_station)
+                    # (Station name, cost)
+                    cost = int(row['Sequence']) - int(prev_row['Sequence'])
+                    station_tuple = (prev_station, cost)
+                    metro_system[station].append(station_tuple)
         
         # Add next station to the current station
         if next_row is not None:
             if row['Line Code'] == next_row['Line Code']:
                 next_station = next_row['English Name']
                 if next_station not in metro_system[station]:
-                    metro_system[station].append(next_station)
+                    # (Station name, cost)
+                    cost = int(next_row['Sequence']) - int(row['Sequence'])
+                    station_tuple = (next_station, cost)
+                    metro_system[station].append(station_tuple)
 
     if next_row is not None:
         station = next_row['English Name']
@@ -45,7 +54,11 @@ def add_next_station(metro_system, prev_row, row, next_row):
             if row['Line Code'] == next_row['Line Code']:
                 prev_station = row['English Name']
                 if prev_station not in metro_system[station]:
-                    metro_system[station].append(prev_station)
+                    # (Station name, cost)
+                    cost = int(next_row['Sequence']) - int(row['Sequence'])
+                    station_tuple = (prev_station, cost)
+                    metro_system[station].append(station_tuple)
+            
 
 def generate_hk_metro_system():
     metro_system = {}
@@ -63,3 +76,4 @@ def generate_hk_metro_system():
 
     return metro_system
 
+print(generate_hk_metro_system())

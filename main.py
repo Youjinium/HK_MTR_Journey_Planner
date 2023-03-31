@@ -6,8 +6,8 @@ def main():
     metro_system = mtr.generate_hk_metro_system()
 
     # Define the start and end station
-    depature = 'Hong Kong'
-    arrival = 'Tsing Yi'
+    depature = 'Airport'
+    arrival = 'Ocean Park'
 
     # Find the shortest path using BFS
     shortest_path, num_stations = bfs.bfs(metro_system, depature, arrival)
