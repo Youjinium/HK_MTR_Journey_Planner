@@ -16,6 +16,9 @@ def bfs(metro_graph, departure, arrival):
     while queue:
         # Remove first station from the queue (Get is similar to pop)
         station, path = queue.get()
+
+        # Uncomment to illustrate search path of algotithm
+        # print(station)
         
         # If we reached our arrival station then we return this path as output
         if station == arrival:
