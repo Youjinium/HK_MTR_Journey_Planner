@@ -79,5 +79,3 @@ def generate_hk_metro_system():
             metro_system[key] = list(set(value))
 
     return metro_system
-
-print(generate_hk_metro_system())

@@ -2,7 +2,6 @@ from queue import Queue
 
 # Define the BFS function
 def bfs(metro_graph, departure, arrival):
-    
     # BFS uses FIFO queue https://www.codingem.com/what-is-a-fifo-queue/
     queue = Queue()
 
@@ -29,7 +28,8 @@ def bfs(metro_graph, departure, arrival):
             visited.add(station)
             
             # We check the next layer of the graph (BFS) by adding all the connected stations from our current station to the queue
-            for connected_station in metro_graph[station]:
+            for connected_station_tuple in metro_graph[station]:
+                connected_station = connected_station_tuple[0]
                 # Check if connected station hasn't already been visited (AVOID LOOPS Lines)
                 if connected_station not in visited:
                     # Path represents the path from the departure station to the current station

@@ -1,9 +1,9 @@
 ﻿Line Code,Direction,Station Code,Station ID,Chinese Name,English Name,Sequence
-AEL,DT,AWE,56,博覽館,AsiaWorld-Expo,1
-AEL,DT,AIR,47,機場,Airport,2
-AEL,DT,TSY,46,青衣,Tsing Yi,3
-AEL,DT,KOW,45,九龍,Kowloon,4
-AEL,DT,HOK,44,香港,Hong Kong,5
+AEL,DT,AWE,56,博覽館,AsiaWorld-Expo,0
+AEL,DT,AIR,47,機場,Airport,5
+AEL,DT,TSY,46,青衣,Tsing Yi,65
+AEL,DT,KOW,45,九龍,Kowloon,105
+AEL,DT,HOK,44,香港,Hong Kong,115
 DRL,DT,SUN,54,欣澳,Sunny Bay,1
 DRL,DT,DIS,55,迪士尼,Disneyland Resort,2
 EAL,DT,LOW,76,羅湖,Lo Wu,1
